@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="author" content="Benesses Zacarias Daniel">
+    <meta name="description"
+        content=" Um dicionário simples de Emakhua. Com pesquisa de palavras, tradutor e pronuncia de palavras e muito mais.">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/configuracoes.css">
+    <link rel="stylesheet" href="./css/palavra.css">
+    <link rel="stylesheet" href="./css/palavra_do_dia.css">
+    <link rel="stylesheet" href="./css/palavras_favoritas.css">
+    <link rel="stylesheet" href="./css/tradutor.css">
+    <link rel="stylesheet" href="./css/personalizacoes.css">
+    <link rel="stylesheet" href="./css/sobre_dicemakhua.css">
+    <link rel="stylesheet" href="./css/preferencias.css">
+    <link rel="stylesheet" href="./css/caixa_d_alertas.css">
+    <link rel="stylesheet" href="./css/media_query_desktop.css">
+    <link rel="icon" href="./img/fav.png" type="image/x-icon">
+    <title>DicEmakhuwa</title>
+</head>
+
+<body>
+    <audio id="tocar_audio">
+        <source src="./audio/ahu.webm" type="audio/webm">
+    </audio>
+    <div class="area_config">
+        <div class="area_ocultar"><button class="btn_config_oc" id="btn_configuracoes"><img class="img_ocultar_menu"
+                    src="./img/abrir_menu_p.svg"></button></div>
+        <div class="conf">
+            <div class="logo_nome"><img class="img_logo" src="./img/config_area_sf.png"></div>
+            <div class="elementos_config">
+                <div class="btn_configs">
+                    <button class="btn_conf btn1">
+                        <img src="./img/dicionario_p.svg" alt="">
+                        <span class="font_elmentos">
+                            Dicionário
+                        </span>
+                    </button>
+                </div>
+                <div class="btn_configs">
+                    <button class="btn_conf btn2">
+                        <img src="./img/dia_p.svg" alt="">
+                        <span class="font_elmentos">
+                            Palavra Do Dia
+                        </span>
+                    </button>
+                </div>
+                <div class="btn_configs">
+                    <button class="btn_conf btn">
+                        <img src="./img/favorito_p.svg" alt="">
+                        <span class="font_elmentos">
+                            Palavras Favoritas
+                        </span>
+                    </button>
+                </div>
+                <div class="btn_configs">
+                    <button class="btn_conf btn3">
+                        <img src="./img/trad_p.svg" alt="">
+                        <span class="font_elmentos">
+                            Tradutor
+                        </span>
+                    </button>
+                </div>
+                <div class="btn_configs">
+                    <button class="btn_conf btn4">
+                        <img src="./img/definicoes_p.svg" alt="">
+                        <span class="font_elmentos">
+                            Personalizações
+                        </span>
+                    </button>
+                </div>
+                <div class="btn_configs"><button class="btn_conf btn5">
+                        <img src="./img/sobre_p.svg" alt="">
+                        <span class="font_elmentos">
+                            Sobre DicMakhua
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topo_dic">
+        <div class="nome_pesquisa">
+            <div class="nome font_elmentos">
+                <span id="nome_app">
+                    DicEmakhuwa
+                </span>
+            </div>
+            <div class="pesquisa">
+                <input id="input_pesq" class="campo_pesquisa" type="text"
+                    placeholder="Pesquisar Palavra em Português ou Emakhuwa">
+                <button id="btn_pesq" class="topo_btn">
+                    <img class="pesq_img" src="./img/pesq_p.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="sessao_app">
+        <div id="home_dicionario" class="home_dicionario activa tela">
+            <div id="sessao" class="sessao">
+                <div class="palavras_armazem">
+                    <div id="scrol" class="scrol">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="palavra_d_dia" class="palavra_d_dia tela">
+            <div class="area_pl_do_dia">
+                <div class="pl_dia_conceitos">
+                    <div class="pl_dia_titulo font_elmentos"><span id="titu" class="">Explicação</span></div>
+                    <div class="pl_exp">
+                        <div class="div font_elmentos">
+                            <div class="div_">
+                                <span class="pal_">
+                                    <p class="pl_dia_ema"></p>
+                                </span>
+                                <img class="con img_seta_fav" src="./img/setaEsquerdaDireitaD.svg">
+                                <span class="pal_">
+                                    <p class="pl_dia_pt"></p>
+                                </span>
+                            </div>
+                            <div class="favoritar_ouvir">
+                                <button class="btn_fav_pl_dia">
+                                    <img id="img_f_dia" class="img_fav_dia" src="./img/favorito_p.svg" alt="">
+                                </button>
+                                <button class="btn_ouvir_pl_dia">
+                                    <img src="./img/ouvir_p.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                        <div id="pl_explicacao" class="pl_explicacao">
+                            <div id="div_expl_cont">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="favoritas_" class="favoritas_ tela">
+            <div class="sessao_pl">
+                <div class="escolha_ling">
+                    <div class="area_linguas">
+                        <span id="favor_ling_1" class="ling_1 font_elmentos">Português</span>
+                        <button id="btn_mudar_favor" class="mudar_ling" style="background: none;"><img
+                                src="./img/trocar_p.svg" alt=""></button>
+                        <span id="favor_ling_2" class="ling_2 font_elmentos">Emakhuwa</span>
+                    </div>
+                </div>
+                <div class="palavras_favoritas">
+                    <div class="favoritas">
+                        <div class="armazem_favoritas font_elmentos">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tradutor" class="tradutor tela">
+            <div class="sessao_trad">
+                <div class="area_trad">
+                    <div class="scrol_tr">
+                        <div class="escolha_ling font_elmentos">
+                            <div class="area_linguas">
+                                <span id="tr_ling_1" class="ling_1">Português</span>
+                                <button class="mudar_ling tr_mudar_ling"><img src="./img/trocar_p.svg" alt=""></button>
+                                <span id="tr_ling_2" class="ling_2">Emakhuwa</span>
+                            </div>
+                        </div>
+                        <div class="area_traducao_geral">
+                            <div id="campos_trad" class="campos_trad">
+                                <div class="entrada_sem_traducao traducao">
+                                    <textarea maxlength="3964" enterkeyhint="send" class="font_elmentos"
+                                        placeholder="Texto para traduzir" id="texto_p_traduzir"></textarea>
+                                    <div class="atalhos">
+                                        <button id="traduzir_btn">
+                                            <img class="traduzir_texto_img" src="./img/trad_p.svg" alt="">
+                                        </button>
+                                        <button id="ouvir_texto_p_tr_btn">
+                                            <img class="ouvir_texto_p_tr_img" src="./img/ouvir_p.svg" alt="">
+                                        </button>
+                                        <button id="copiar_texto_p_tr_btn">
+                                            <img class="copiar_texto_p_tr_img" src="./img/copy_p.svg" alt="">
+                                        </button>
+                                        <button class="mudar_ling tr_mudar_ling">
+                                            <img class="tocar_aud_p_trad" title="" src="./img/trocar_p.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="saida_tradusido traducao">
+                                    <textarea id="texto_traduzido" class="texto_traduzido font_elmentos" placeholder=""
+                                        readonly></textarea>
+                                    <div class="atalhos">
+                                        <button id="ouvir_texto_traduzido_btn">
+                                            <img class="ouvir_texto_traduzido_img" src="./img/ouvir_p.svg" alt="">
+                                        </button>
+                                        <button id="copiar_traducao_btn" class="copiar_">
+                                            <img class="copiar_traducao_img" src="./img/copy_p.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="personalizacoes" class="personalizacoes tela">
+            <div class="sessao_personalizacao">
+                <div class="area_personalizacao">
+                    <div class="area_fonte">
+                        <div class="titulo_area font_elmentos">
+                            Selecione tipo de fonte
+                        </div>
+                        <div class="selecionar_font font_elmentos">
+                            <select name="font" id="selector_d_fonte">
+                                <option class="font_elmentos" value="padrao" selected> Padrão</option>
+                                <option class="font_elmentos" value="palatino"> Palatino</option>
+                                <option class="font_elmentos" value="calibri"> Calibri</option>
+                                <option class="font_elmentos" value="geneva"> Geneva</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="area_tam ">
+                        <div class="titulo_area font_elmentos">
+                            Selecione tamanho da fonte
+                        </div>
+                        <div class="selecionar_tam_font">
+                            <select name="tam_font" id="selector_d_tamanho_d_fonte">
+                                <option class="font_elmentos" value="normal" selected> Normal</option>
+                                <option class="font_elmentos" value="medio"> Médio</option>
+                                <option class="font_elmentos" value="grande"> Grande</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="area_escolha">
+                        <div class="titulo_es font_elmentos">
+                            Lista em:
+                        </div>
+                        <div class="selecionar_escolha">
+                            <div class="ling_es">
+                                <input type="radio" name="lingua" value="pt_p_ema" id="pt_p_ema" checked>
+                                <label class="font_elmentos" for="pt_p_ema">Português para Emakhuwa</label>
+                            </div>
+                            <div class="ling_es">
+                                <input type="radio" name="lingua" value="ema_p_pt" id="ema_p_pt">
+                                <label class="font_elmentos" for="ema_p_pt">Emakhuwa para Português</label>
+                            </div>
+                            <div class="ling_es">
+                                <input type="radio" name="lingua" value="ambos" id="ambos">
+                                <label class="font_elmentos" for="ambos">Ambos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="area_redif">
+                        <button class="font_elmentos" id="redif">Redefinir Predefinições</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sobre_dicemakhuwa" class="sobre_dicemakhuwa font_elmentos tela">
+            <div class="sessao_sobre">
+                <div class="area_sobre">
+                    <div class="dic_emakhuwa_mens">
+                        <h1>DicEmakhuwa</h1>
+                        <p>O <span class="dic_mens_im">DicEmakhuwa</span> é um <strong>dicionário digital</strong> feito
+                            para <span class="dic_mens_im">preservar e facilitar o aprendizado da língua
+                                Emakhuwa</span>.
+                        </p>
+                        <p>Desenvolvido por <strong>Benesses Zacarias Daniel</strong>, estudante apaixonado por
+                            tecnologia e educação em Moçambique, o objetivo é <span class="dic_mens_im">tornar o
+                                Emakhuwa
+                                acessível para todos</span>, mesmo offline.</p>
+
+                        <p><strong>Ajude o DicEmakhuwa a crescer!</strong></p>
+                        <p>Envie <span class="dic_mens_im">novas palavras, traduções ou correções</span> e faça parte do
+                            crescimento deste projeto. As melhores contribuições serão adicionadas ao app.</p>
+                        <div class="ajudar">
+                            <a href="https://wa.link/ed2qvb" id="btn_ajudar">Enviar novas palavras</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../platforms/android/platform_www/cordova.js"></script> -->
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>

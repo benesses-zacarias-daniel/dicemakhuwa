@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.apache.cordova.hellocordova" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>DicEmakhuwa</name>
+    <description>
+        Um dicionário simples de Emakhua. Com pesquisa de palavras, tradutor e pronuncia de palavras e muito mais.
+    </description>
+    <author email="benesseszacariasdaniel@gmail.com">
+        Equipe BZD - Programação
+    </author>
+    <platform name="android">
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="./res/screen/android/splash_cf.png" />
+        <preference name="AutoHideSplashScreen" value="true"/> 
+        <preference name="FadeSplashScreenDuration" value="2200"/>
+        <preference name="AndroidPostSplashScreenTheme" value="@style/Theme.AppCompat.NoActionBar" />
+        <preference name="SplashScreenDelay" value="3000"/>
+        <preference name="AndroidWindowSplashScreenBackground" value="#000000" /> 
+        <icon src="./resources/icon_apk_p.png" /> 
+    </platform>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

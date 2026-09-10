@@ -1,0 +1,250 @@
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    pointer-events: auto;
+}
+
+button,
+select,
+div,
+span,
+p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: auto;
+}
+
+img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    overflow: hidden;
+    background: white;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+}
+
+.topo_dic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-shrink: 0;
+    width: 100%;
+    height: 38px;
+    background: #d1d0d0;
+    padding-left: 2px;
+    padding-right: 2px;
+    /* border: 2px solid rgb(21, 0, 255); */
+}
+
+.font_elmentos {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.nome_pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row;
+    width: 88%;
+    /* border: 1px solid green; */
+}
+
+.nome {
+    width: 70%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row;
+    white-space: nowrap;
+}
+
+.ocultar_ {
+    display: none !important;
+}
+
+.ajustar_texto {
+    justify-content: flex-start !important;
+    padding-left: 2px;
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-flow: row;
+    width: 40%;
+    flex-shrink: 0;
+    border-radius: 5px;
+}
+
+.pesq_b {
+    width: 100% !important;
+    background: #c8c6c6;
+    border-bottom: 2px solid #000;
+}
+
+.pesquisa button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+}
+
+.mostrar {
+    display: inline !important;
+}
+
+.campo_pesquisa {
+    width: 98%;
+    height: 20px;
+    display: none;
+}
+
+button {
+    height: 34px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.15s ease;
+    transform: scale(1);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button:active {
+    transform: scale(0.90);
+}
+
+input {
+    background: #c8c6c6;
+    cursor: pointer;
+    padding: 3px;
+}
+
+input:focus {
+    outline: none;
+    width: 98%;
+    height: 20px;
+}
+
+.sessao_app {
+    /* position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; */
+    flex: 1;
+    width: 100%;
+    height: calc(100vh - 38px);
+    flex-shrink: 0;
+    /* overflow-y: scroll; */
+}
+
+.ocultar_nome {
+    display: none !important;
+}
+
+.palavra {
+    cursor: pointer;
+    width: 99%;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+
+    border: 2px solid rgba(100, 99, 99, 0.708);
+    border-radius: 5px;
+
+    padding-left: 2px;
+    background: rgb(255, 255, 255);
+
+    margin-bottom: 5px;
+}
+
+.palavra:hover {
+    background: rgb(228, 227, 227);
+}
+
+.palavra_pt,
+.palavra_ema {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 46%;
+    margin: 0;
+}
+
+.sessao {
+    /* position: fixed;
+    top: 40px; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+    height: calc(100vh - 38px);
+    background: rgba(0, 0, 0, 0);
+}
+
+.palavras_armazem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+.scrol {
+    height: 100%;
+    width: 100%;
+    padding-top: 4px;
+    padding-left: 4px;
+    padding-bottom: 8px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.activa {
+    display: block;
+}

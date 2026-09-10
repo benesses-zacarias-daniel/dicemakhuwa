@@ -1,0 +1,27 @@
+.normal {
+    font-size: 1.1rem;
+}
+
+.medio {
+    font-size: 1.2rem;
+}
+
+.grande {
+    font-size: 1.6rem;
+}
+
+.padrao {
+    font-family: 'Times New Roman', Times, serif !important;
+}
+
+.geneva {
+    font-family: Geneva, Tahoma, "monospace", sans-serif !important;
+}
+
+.palatino {
+    font-family: Palatino, 'Book Antiqua', serif !important;
+}
+
+.calibri {
+    font-family: Calibri, Candra, sans-serif !important;
+}

@@ -1,0 +1,23 @@
+.caixa_ {
+    position: fixed;
+    bottom: 7px;
+    left: 50%;
+    width: 100%;
+    background: #c8c6c684;
+    padding: 8px;
+    transform: translateX(-50%);
+    color: #000;
+    z-index: 9999;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.caixa_ img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}

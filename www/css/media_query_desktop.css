@@ -1,0 +1,146 @@
+@media only screen and (min-width:651px) {
+
+    /* Tablet */
+    #campos_trad {
+        gap: 10px;
+    }
+
+    .nome_pesquisa {
+        width: 90%;
+    }
+
+    /* textarea {
+        border: 2px solid rgb(126, 88, 253);
+    } */
+}
+
+@media only screen and (min-width:1280px) {
+
+    /* Tablet */
+    #campos_trad {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .atalhos {
+        flex-flow: column;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .traducao {
+        width: 600px;
+        /* min-height: 660px; */
+    }
+
+    /* textarea {
+        border: 2px solid rgb(0, 44, 201);
+    } */
+}
+
+@media only screen and (min-width:1799px) {
+
+    .traducao {
+        width: 880px;
+    }
+
+    /* textarea {
+        border: 2px solid rgb(255, 0, 174);
+    } */
+}
+
+@media only screen and (min-width:2300px) {
+
+    /* Tablet */
+    .nome_pesquisa {
+        width: 96%;
+    }
+
+    .traducao {
+        width: 1135px;
+    }
+
+    /* textarea {
+        border: 2px solid rgb(0, 208, 255);
+    } */
+}
+
+@media only screen and (min-width:2900px) {
+    body {
+        font-size: 18px;
+    }
+
+    .nome_pesquisa {
+        width: 97%;
+    }
+
+    .traducao {
+        width: 1435px;
+    }
+
+    /* textarea {
+        border: 2px solid rgb(102, 100, 21); 
+    } */
+}
+
+/*Parte de LandScape*/
+@media only screen and (orientation: landscape) and (max-height:499px) {
+    textarea {
+        font-size: 13px;
+    }
+
+    .campos_trad {
+        flex-direction: row;
+        /* border: 2px solid red; */
+    }
+
+    .atalhos {
+        flex-flow: column;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .logo_nome {
+        height: 159px;
+    }
+
+    .dic_emakhuwa_mens {
+        max-height: 310px;
+    }
+
+    .elementos_config {
+        /* padding: 10px 0; */
+        height: 200px;
+    }
+
+    .btn_configs {
+        height: 28px;
+    }
+
+    .traducao {
+        height: 100%;
+    }
+}
+
+/*Parte de LandScape*/
+@media only screen and (orientation: landscape) and (min-height:500px) {
+    textarea {
+        font-size: 13px;
+    }
+
+    .campos_trad {
+        flex-direction: row;
+        /* border: 2px solid green; */
+    }
+
+    .atalhos {
+        flex-flow: column;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    .traducao {
+        height: 100%;
+    }
+}

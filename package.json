@@ -1,0 +1,27 @@
+{
+  "name": "DicEmakhuwa",
+  "displayName": "DicEmakhuwa",
+  "version": "1.0.5",
+  "description": "Um dicionário simples de Emakhuwa. Com pesquisa de palavras, tradutor e pronuncia de palavras e muito mais.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Equipe BZD - Programação <benesseszacariasdaniel@gmail.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^15.0.0",
+    "cordova-plugin-splashscreen": "^6.0.1"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-splashscreen": {}
+    }
+  }
+}

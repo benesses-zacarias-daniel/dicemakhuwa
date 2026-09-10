@@ -1,0 +1,98 @@
+.area_config {
+    width: 240px;
+    max-width: 240px;
+    height: 863px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    pointer-events: auto;
+    transform: translateX(100%);
+    transition: transform .4s ease;
+}
+
+.mostrar_configs {
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+#btn_configuracoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    width: 10%;
+    position: absolute;
+    left: -32px;
+    top: 3px;
+}
+
+.conf {
+    width: 240px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column;
+
+}
+
+.logo_nome {
+    width: 100%;
+    height: 164px;
+    padding-left: 2px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+    gap: 8px;
+    background: linear-gradient(45deg, black, black, rgba(172, 172, 169), rgba(172, 172, 169));
+}
+
+.img_logo {
+    width: 180px;
+    height: auto;
+    max-width: 180px;
+}
+
+.elementos_config {
+    width: 100%;
+    height: 81%;
+    min-height: calc(100vh - 164px);
+    background: #fff;
+}
+
+.btn_configs {
+    width: 99%;
+    /* height: 40px; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+    padding: 2px;
+    border-bottom: 2px solid rgb(211, 211, 211);
+    background: rgb(255, 255, 255);
+}
+
+.btn_configs:hover {
+    background: rgb(228, 227, 227);
+}
+
+.btn_conf img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn_conf {
+    width: 100%;
+    /* height: 30px; */
+    gap: 5px;
+    text-align: left;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: row;
+}
