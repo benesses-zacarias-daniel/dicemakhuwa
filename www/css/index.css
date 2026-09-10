@@ -214,7 +214,7 @@ input:focus {
     justify-content: center;
     flex-flow: column;
     width: 100%;
-    height: calc(100vh - 34px);
+    height: calc(100vh - 25px);
     background: rgba(0, 0, 0, 0);
 }
 
