@@ -163,7 +163,7 @@ input:focus {
     flex: 1;
     width: 100%;
     /* height: calc(100vh - 38px); */
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     /* overflow-y: scroll; */
 }
 
