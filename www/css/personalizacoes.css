@@ -13,7 +13,7 @@
     justify-content: center;
     flex-flow: column;
     width: 100%;
-    /* height: calc(100vh - 38px); */
+    height: calc(100vh - 38px);
     background: white;
 }
 
