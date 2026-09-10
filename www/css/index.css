@@ -56,7 +56,7 @@ html {
     flex-flow: row;
     flex-shrink: 0;
     width: 100%;
-    height: 38px;
+    height: 38px !important;
     background: #d1d0d0;
     padding-left: 2px;
     padding-right: 2px;
